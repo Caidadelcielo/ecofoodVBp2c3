@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Iniciar Sesion PNK</title>
+</head>
+<body>
+    <div class="login-container">
+    
+        <div class="contenido">
+            <form action="dashboard.html" method="get">
+                <h1>Iniciar Sesion</h1>
+                
+                <div class="input-box">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" name="Usuario" required>
+                    <label for="Usuario">Usuario</label>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" name="Contraseña" required>
+                    <label for="Contraseña">Contraseña</label>
+                </div>
+                
+                <div class="vinculo">
+                    <label><input type="checkbox" id="Recuerdame">Recuerdame</label>
+                    <a href="recuperar_contraseña.html">olvidaste tu contraceña?</a>
+                </div>
+
+                <button type="submit" class="btn">login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
