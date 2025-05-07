@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EcoFood</title>
-  <link rel="stylesheet" href="styles.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<header>
-    <div class="logo">eco <strong>food</strong></div>
+<body>
+
+  <header class="d-flex justify-content-between align-items-center p-3">
+    <div class="logo fw-bold fs-4 text-success">eco <strong>food</strong></div>
     <nav>
-      <ul>
-        <li><a href="#">Registrarse</a></li>
-        <li><a href="#">Iniciar Sesión</a></li>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="register.html">Registrarse</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Iniciar Sesión</a></li>
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
       </ul>
     </nav>
   </header>
-  <section class="hero">
-    </div>
-  </section>
-<div class="somos">
-  <h1>ECO FOOD</h1>
-  <P>
-    EcoFood es una organización comprometida con la reducción del desperdicio alimentario mediante iniciativas educativas, tecnológicas y prácticas cotidianas. Nuestro propósito es promover un mundo más justo y sostenible, empoderando a las personas y comunidades para optimizar el uso de alimentos, minimizar residuos y proteger nuestro planeta.
-  </P>
 
-</div>
-  <section class="ayuda">
-    <div class="titulos">
-      <h2>¿Cómo nos puedes</h2>
-      <div class="verde">
-        <h2> ayudar?</h2>
-      </div>
-    </div>
-  
-    <div class="acciones-ayuda">
-      <div class="tarjeta">
-        <img src="img/consumo-responsable (1).png" alt="">
-        <h3>Consume responsablemente</h3>
-      </div>
-      <div class="tarjeta">
-        <img src="img/consumo-responsable.png" alt="">
-        <h3>Apoya Iniciativas responsable</h3>
-      </div>
-      <div class="tarjeta">
-        <img src="img/colaboracion.png" alt="">
-        <h3>Participa</h3>
-      </div>
-    </div>
-  </section>
-  <div class="caja-astetik">
-    <div class="caja-img">
-      <img src="img/Kennedy Ann's Amazon Page - SMOOTHIE ACCESSORIES.jpeg" alt="">
-    </div>
-    <div class="textos">
-      <div class="cajita">
-        <h3> ¿Que hacemos?</h3>
-        <p> Educamos
-          Ofrecemos materiales educativos gratuitos y talleres comunitarios para fomentar prácticas sostenibles en el consumo de alimentos.</p>
-      </div>
-      <div class="cajita">
-        <h3>Conectamos</h3>
-        <p>Promovemos alianzas entre productores, comerciantes, consumidores y comunidades para reducir excedentes y aprovechar al máximo los alimentos disponibles.</p>
-      </div>
-      <div class="cajita">
-          <h3>Innovamos</h3>
-          <p>Utilizamos la tecnología para desarrollar soluciones prácticas, como aplicaciones móviles, plataformas web y redes comunitarias que faciliten la reducción del desperdicio alimentariot.</p>
-      </div>
-    </div>
-  </div>
-  <section class="vision">
-    <h2>Nuestra visión</h2>
-    <p>
-      Nuestra visión es un mundo en el cual los alimentos se valoren y aprovechen responsablemente, en donde la seguridad alimentaria esté garantizada para todos y el desperdicio alimentario sea mínimo, generando un impacto positivo significativo en el medio ambiente, la economía y la sociedad.
+  <main class="container my-5 text-center">
+    <h1 class="display-5 fw-semibold">Bienvenido a EcoFood Community</h1>
+    <p class="lead">Únete a la reducción del desperdicio de alimentos.</p>
+    <div id="fraseMotivadora" class="alert alert-success mt-4"></div>
+  </main>3
+
+  <section class="container text-center py-5">
+    <h2 class="mb-4 fw-semibold">¿Quiénes somos?</h2>
+    <p class="mx-auto" style="max-width: 700px;">
+      EcoFood es una organización comprometida con la reducción del desperdicio alimentario mediante iniciativas educativas, tecnológicas y prácticas cotidianas. Promovemos un mundo más justo y sostenible, empoderando a comunidades para optimizar el uso de alimentos y proteger el planeta.
     </p>
   </section>
-  <footer>
-    <p><strong>Dirección:</strong> Calle verde 123, Ciudad Sostenible</p>
-    <p><strong>Email:</strong> <a href="mailto:contacto@ecofood.org">contacto@ecofood.org</a></p>
-    <p><strong>Redes Sociales:</strong> @ecofood</p>
-  </footer>
-<body>
 
+  <section class="ayuda text-center py-5 bg-light">
+    <h2 class="fw-semibold mb-3">¿Cómo nos puedes <span class="text-success">ayudar?</span></h2>
+    <div class="d-flex justify-content-center gap-4 flex-wrap mt-4">
+      <div class="tarjeta">
+        <img src="img/consumo-responsable (1).png" alt="Consumo Responsable" />
+        <h3 class="mt-2">Consume responsablemente</h3>
+      </div>
+      <div class="tarjeta">
+        <img src="img/consumo-responsable.png" alt="Apoyo responsable" />
+        <h3 class="mt-2">Apoya iniciativas responsables</h3>
+      </div>
+      <div class="tarjeta">
+        <img src="img/colaboracion.png" alt="Participa" />
+        <h3 class="mt-2">Participa</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="caja-astetik d-flex flex-wrap justify-content-center py-5 gap-4">
+    <div class="card-accion text-center p-4 rounded shadow-sm">
+      <h3 class="mb-2">¿Qué hacemos?</h3>
+      <p>Ofrecemos materiales educativos y talleres para fomentar prácticas sostenibles en el consumo de alimentos.</p>
+    </div>
+    <div class="card-accion text-center p-4 rounded shadow-sm">
+      <h3 class="mb-2">Conectamos</h3>
+      <p>Promovemos alianzas entre productores, comerciantes y consumidores para reducir excedentes alimentarios.</p>
+    </div>
+    <div class="card-accion text-center p-4 rounded shadow-sm">
+      <h3 class="mb-2">Innovamos</h3>
+      <p>Desarrollamos soluciones tecnológicas como apps y plataformas web que ayudan a reducir el desperdicio alimentario.</p>
+    </div>
+  </section>
   
 
+  <section class="vision text-center py-5 bg-light">
+    <h2 class="fw-semibold mb-4">Nuestra visión</h2>
+    <p class="mx-auto" style="max-width: 700px;">
+      Un mundo donde los alimentos se valoren, el desperdicio sea mínimo y la seguridad alimentaria esté garantizada, impactando positivamente al medio ambiente y la sociedad.
+    </p>
+  </section>
+
+  <footer class="text-center py-4 bg-dark text-light">
+    <p><strong>Dirección:</strong> Calle Verde 123, Ciudad Sostenible</p>
+    <p><strong>Email:</strong> <a href="mailto:contacto@ecofood.org" class="text-light">contacto@ecofood.org</a></p>
+    <p><strong>Redes Sociales:</strong> @ecofood</p>
+  </footer>
+
+  <script src="js/index.js"></script>
 </body>
 </html>

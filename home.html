@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Food - Inicio</title>
+  <link rel="stylesheet" href="/home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Productos Disponibles</h2>
+    <div class="row" id="contenedorProductos"></div>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Contáctanos</h2>
+    <form id="formContacto" class="mt-4">
+      <input type="text" class="form-control mb-3" placeholder="Tu nombre" id="nombreContacto">
+      <input type="email" class="form-control mb-3" placeholder="Tu correo" id="emailContacto">
+      <textarea class="form-control mb-3" placeholder="Tu mensaje" id="mensajeContacto"></textarea>
+      <button class="btn btn-primary">Enviar Mensaje</button>
+      <div id="mensajeContactoExito" class="mt-2 text-success"></div>
+    </form>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Preguntas Frecuentes</h2>
+    <div id="listaFaqs"></div>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Comentarios de Usuarios</h2>
+    <form id="formComentario" class="mb-4">
+      <textarea class="form-control" placeholder="Escribe tu comentario..." id="comentarioTexto"></textarea>
+      <button class="btn btn-success mt-2">Publicar</button>
+    </form>
+    <div id="listaComentarios"></div>
+  </div>
+
+  <script>
+    
+    const productos = [
+      {
+        nombre: "Variedad de verduras Orgánica",
+        descripcion: "Deliciosas verduras organicas sin quimicos.",
+        precio: "$25.000",
+        imagen: "/img/verduras.jpg" 
+      },
+      {
+        nombre: "Pan Integral",
+        descripcion: "Pan artesanal hecho con granos enteros.",
+        precio: "$4.000",
+        imagen: "/img/pancito.jpg" 
+      },
+      {
+        nombre: "Leche de Avena",
+        descripcion: " Un 1L de leche de avena Alternativa vegetal, ideal para intolerantes a la lactosa.",
+        precio: "$2.500 por litro",
+        imagen: "img/avenaastetik.png" 
+      }
+    ];
+
+    function cargarProductos() {
+      const contenedor = document.getElementById("contenedorProductos");
+      productos.forEach(prod => {
+        contenedor.innerHTML += `
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="${prod.imagen}" class="card-img-top" alt="${prod.nombre}">
+              <div class="card-body">
+                <h5 class="card-title">${prod.nombre}</h5>
+                <p class="card-text">${prod.descripcion}</p>
+                <p class="card-text text-success fw-bold">${prod.precio}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    
+    const comentarios = [];
+    function agregarComentario() {
+      const texto = document.getElementById("comentarioTexto").value.trim();
+      if (!texto) return;
+      const nombreUsuario = "UsuarioAnonimo";
+      comentarios.push({ nombreUsuario, textoComentario: texto });
+      document.getElementById("comentarioTexto").value = "";
+      mostrarComentarios();
+    }
+    function mostrarComentarios() {
+      const lista = document.getElementById("listaComentarios");
+      lista.innerHTML = "";
+      comentarios.forEach(c => {
+        lista.innerHTML += `
+          <div class="border p-2 mb-2">
+            <strong>${c.nombreUsuario}</strong><br>
+            ${c.textoComentario}
+          </div>
+        `;
+      });
+    }
+
+    
+    const faqs = [
+      { pregunta: "¿Qué es Eco Food?", respuesta: "Una tienda online de productos saludables." },
+      { pregunta: "¿Hacen envíos?", respuesta: "Sí, realizamos envíos a todo el país." },
+      { pregunta: "¿Puedo pagar con tarjeta?", respuesta: "Aceptamos tarjetas y transferencias." }
+    ];
+    function cargarFaqs() {
+      const lista = document.getElementById("listaFaqs");
+      faqs.forEach(faq => {
+        lista.innerHTML += `
+          <div class="mb-3">
+            <strong>${faq.pregunta}</strong>
+            <p>${faq.respuesta}</p>
+          </div>
+        `;
+      });
+    }
+
+    
+    function validarContacto(e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombreContacto").value.trim();
+      const email = document.getElementById("emailContacto").value.trim();
+      const mensaje = document.getElementById("mensajeContacto").value.trim();
+      const confirmacion = document.getElementById("mensajeContactoExito");
+
+      if (!nombre || !email || !mensaje) {
+        confirmacion.textContent = "Por favor, completa todos los campos.";
+        confirmacion.classList.remove("text-success");
+        confirmacion.classList.add("text-danger");
+        return;
+      }
+
+      confirmacion.textContent = "¡Mensaje enviado con éxito!";
+      confirmacion.classList.remove("text-danger");
+      confirmacion.classList.add("text-success");
+    }
+
+    document.getElementById("formComentario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      agregarComentario();
+    });
+    document.getElementById("formContacto").addEventListener("submit", validarContacto);
+
+    
+    cargarProductos();
+    cargarFaqs();
+  </script>
+</body>
+</html>
+<script src="js/home.js"></script>

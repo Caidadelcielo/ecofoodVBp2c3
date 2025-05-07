@@ -9,41 +9,41 @@
 <body>
   <div class="registro-container">
     <div class="contenido">
-      <form action="dashboard.html" method="post">
+      <form id="formRegistro" action="login.html" method="post">
         <h1> Registrarse</h1>
 
         <div class="input-box">
-          <input type="text" name="nombre" required />
+          <input type="text" id="nombre" name="nombre" required />
           <label for="nombre">Nombre completo</label>
         </div>
 
         <div class="input-box">
-          <input type="email" name="correo" required />
+          <input type="email" id="correo" name="correo" required />
           <label for="correo">Correo electrónico</label>
         </div>
 
         <div class="input-box">
-          <input type="text" name="usuario" required />
+          <input type="text" id="usuario" name="usuario" required />
           <label for="usuario">Nombre de usuario</label>
         </div>
 
         <div class="input-box">
-          <input type="password" name="contraseña" required />
+          <input type="password" id="contraseña" name="contraseña" required />
           <label for="contraseña">Contraseña</label>
         </div>
 
         <div class="input-box">
-          <input type="password" name="confirmar_contraseña" required />
+          <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required />
           <label for="confirmar_contraseña">Confirmar contraseña</label>
         </div>
 
         <div class="input-box">
-          <input type="tel" name="telefono" required />
+          <input type="tel" id="telefono" name="telefono" required />
           <label for="telefono">Teléfono</label>
         </div>
 
         <div class="input-box">
-          <input type="date" name="fecha_nacimiento" required />
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required />
           <label for="fecha_nacimiento" class="label-activa">Fecha de nacimiento</label>
         </div>
 
@@ -54,8 +54,11 @@
         <button type="submit" class="btn">Registrarse</button>
 
         <p class="login-link">¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+        
+        <div id="mensajeRegistro" class="mensaje-error" style="color: red; margin-top: 10px;"></div>
       </form>
     </div>
   </div>
 </body>
 </html>
+<script src="js/registres.js"></script>

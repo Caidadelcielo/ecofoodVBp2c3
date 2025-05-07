@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Iniciar Sesion PNK</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Iniciar Sesión - Eco Food</title>
 </head>
 <body>
-    <div class="login-container">
-    
-        <div class="contenido">
-            <form action="dashboard.html" method="get">
-                <h1>Iniciar Sesion</h1>
-                
-                <div class="input-box">
-                    <i class="fas fa-user icon"></i>
-                    <input type="text" name="Usuario" required>
-                    <label for="Usuario">Usuario</label>
-                </div>
-                <div class="input-box">
-                    <i class="fas fa-lock icon"></i>
-                    <input type="password" name="Contraseña" required>
-                    <label for="Contraseña">Contraseña</label>
-                </div>
-                
-                <div class="vinculo">
-                    <label><input type="checkbox" id="Recuerdame">Recuerdame</label>
-                    <a href="recuperar_contraseña.html">olvidaste tu contraceña?</a>
-                </div>
-
-                <button type="submit" class="btn">login</button>
-            </form>
+  <div class="login-container">
+    <div class="contenido">
+      <form id="formLogin" action="index.html" method="post">
+        <h1>Iniciar Sesión</h1>
+        
+        <div class="input-box">
+          <input type="text" name="usuario" id="usuario" required>
+          <label for="usuarioLogin">Usuario</label>
         </div>
+
+        <div class="input-box">
+          <input type="password" name="contraseña" id="contraseña" required>
+          <label for="contraseñaLogin">Contraseña</label>
+        </div>
+
+        <div class="vinculo">
+          <label><input type="checkbox" id="recuerdame"> Recuérdame</label>
+          <a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        
+
+        <div id="mensajeLogin" class="mensaje-error" style="color: red; margin-top: 10px;"></div>
+
+
+        <button type="submit" class="btn">Login</button>
+
+      </form>
     </div>
+  </div>
 </body>
 </html>
+<script src="js/login.js"></script>
+          
+<!//nombre de usuario:Javierhehehe, contraseña: 123456--<
